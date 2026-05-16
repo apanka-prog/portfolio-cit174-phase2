@@ -232,6 +232,64 @@ section { padding: 4.5rem 0; }
 /* ---------- GRAY BG SECTION ---------- */
 .bg-gray { background: var(--gray-light); }
 
+/* ---------- LISTS ---------- */
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.about-list li {
+    padding: 0.6rem 0.8rem 0.6rem 1rem;
+    margin-bottom: 0.5rem;
+    background: var(--white);
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+    color: var(--charcoal);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    counter-increment: ol-counter;
+}
+
+.process-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    counter-reset: ol-counter;
+}
+
+.process-list li {
+    padding: 0.75rem 1rem 0.75rem 3.5rem;
+    margin-bottom: 0.75rem;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    color: var(--charcoal);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    position: relative;
+    counter-increment: ol-counter;
+}
+
+.process-list li::before {
+    content: counter(ol-counter);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--navy);
+    color: var(--white);
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
 /* ---------- TAG / BADGE ---------- */
 .badge {
     display: inline-block;
